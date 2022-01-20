@@ -1,0 +1,38 @@
+<app-parent></app-parent>
+
+<div  [ngSwitch]="name">
+    <div *ngSwitchCase="'lalu'">
+        <h1>lalu name display</h1>
+
+    </div>
+    <div *ngSwitchCase="'guru'">
+        <h1>guru name display</h1>
+
+    </div>
+    <div *ngSwitchCase="'rohit'">
+        <h1>rohit name display</h1>
+
+    </div>
+    <div *ngSwitchCase="'ntr'">
+        <h1>ntr name display</h1>
+
+    </div>
+    <div *ngSwitchDefault>
+        <h1>no name display</h1>
+
+    </div>
+
+</div>
+<table>
+    <ul>
+        <li *ngFor="let s of l">{{s.name}}-{{s.age}}</li>
+    </ul>
+    <tr *ngFor="let s of l">
+        <td>{{s.name}}</td>
+        <td>{{s.age}}</td>
+
+    </tr>
+
+</table>
+<button (click)="k()">ON CLICK</button>
+<h1 *ngIf="sree">ROHIT</h1>

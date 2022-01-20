@@ -1,0 +1,24 @@
+<p>registation works!</p>
+
+<div class="container">
+    <div class="col-md-6">
+<form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="form-group">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email"><br>
+      <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+      <span style="color: red;" *ngIf=" email?.invalid && email?.touched">please enter valid emailid</span>
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input  type="password" class="form-control" id="exampleInputPassword1" formControlName="pass">
+      <span style="color: red;" *ngIf=" pass?.invalid && pass?.touched">please enter valid emailid</span>
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button  [disabled]="loginForm?.invalid" type="submit" class="btn btn-primary">Submit</button>
+  </form>
+  </div>
+  </div>

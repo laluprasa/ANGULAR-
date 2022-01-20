@@ -1,0 +1,43 @@
+<app-parent></app-parent>
+
+<button (click)="change()">click</button>
+<p *ngIf="flag">lalurohoit</p>
+
+<table>
+  <tr *ngFor="let user of users">
+    <td>{{user.name}}</td>
+    <td>{{user.age}}</td>
+
+  </tr>
+  <ul>
+    <li  *ngFor="let user of users">{{user.name}}.{{user.age}}</li>
+    
+  </ul>
+</table>
+<table>
+  <ul >
+    <li *ngFor="let u of s">{{u.name}}-{{u.age}}</li>
+
+  </ul>
+  <tr *ngFor="let u of s">
+    <td>{{u.name}}</td>
+    <td>{{u.age}}</td>
+</table>
+<div [ngSwitch]="selectedName">
+  <div *ngSwitchCase="'sree'">
+    <h2> sree has been selected</h2>
+
+  </div>
+  <div *ngSwitchCase="'rohit'">
+    <h2> rohit has been selected</h2>
+
+  </div>
+  <div *ngSwitchCase="'lalu'">
+    <h2> lalu has been selected</h2>
+
+  </div>
+  <div *ngSwitchDefault>
+    <h2> no has been selected</h2>
+
+  </div>
+</div>
